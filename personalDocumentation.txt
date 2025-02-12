@@ -1,0 +1,55 @@
+-----------------------------------------------------
+Initialization
+-----------------------------------------------------
+
+Starting off, you see a board with seven buildStacks, that go up in size starting from one. the leftmost buildstack has one card, the rightmost has 7, meaning there are 28 cards that start on the table. The bottom card of each buildstack starts face up, giving you 7 cards initially revealed. 
+
+There are four empty suitStacks, one for each suit, that can be increased in size by the order of the suit, and only the top card from the suit stack can be moved back to the buildStacks.
+
+The pile is facedown and contains all the card not in the buildStacks. You can flip one card from the top of the pile to be faceup in the talon.
+
+--------------------------------------------------
+actions
+--------------------------------------------------
+
+You can move the faceup card into the buildstacks. You can only do this with the current faceup card on the talon, stack architecture. You cannot flip a talon back onto the pile, you can only move through the pile linearily. Once the pile is empty, you flip the entire talon back into the pile in the same order. After a flip, for example, the top card on the talon would become the bottom card in the pile.
+
+Each time you move a card it will add to the number of moves. Here are the potential moves:
+
+buildStack -> buildStack:
+
+pile(top) -> talon(top):
+
+talon(Top) -> buildStack(top):
+
+buildStack(top) -> suitStack(top):
+
+suitStack(top) -> buildstack(top):
+
+pileFlip
+
+------------------------------------------------
+goal
+------------------------------------------------
+
+Once every card in buildstack has been revealed, the game has  been won.
+
+
+
+I will need a class that manages the board and can print basic images of what the board currently looks like. this class should also manage validity of moves. solitaireTable
+
+class that decides which moves to make and keeps track of score. This will be the algorithm part
+
+last priority - class to view the alogrithm working in real time
+
+
+
+
+
+
+
+
+
+
+
+
